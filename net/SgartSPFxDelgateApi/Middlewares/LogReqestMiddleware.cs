@@ -6,10 +6,20 @@ public class LogReqestMiddleware(ILogger<LogReqestMiddleware> logger) : IMiddlew
     {
         try
         {
+            if (System.Diagnostics.Trace.CorrelationManager.ActivityId == Guid.Empty)
+            {
+                // sovrascrivo solo se non era già impostato
+                System.Diagnostics.Trace.CorrelationManager.ActivityId = Guid.NewGuid();
+            }
+
             logger.LogDebug(C.LOG_REQUEST_BEGIN + " {method} {path}{query}"
                 , context.Request.Method, context.Request.Path, context.Request.QueryString);
 
             await next(context);
+            if (context.Response.StatusCode == 401)
+            {
+                logger.LogWarning("401 Unauthorized");
+            }
         }
         catch (Exception ex)
         {

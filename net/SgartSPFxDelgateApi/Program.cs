@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Identity.Web;
 using NLog;
+using NLog.Extensions.Logging;
 using NLog.Web;
 using SgartSPFxDelgateApi;
 using SgartSPFxDelgateApi.Middlewares;
@@ -44,7 +45,7 @@ try
     // Configure the HTTP request pipeline.
     if (app.Environment.IsDevelopment())
     {
-        logger.Trace("ENV PROD");
+        logger.Info("ENV PROD");
 
         app.UseSwagger();
         app.UseSwaggerUI();
