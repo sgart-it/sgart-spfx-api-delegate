@@ -1,0 +1,6 @@
+@SgartSPFxDelgateApi_HostAddress = https://localhost:7101
+
+GET {{SgartSPFxDelgateApi_HostAddress}}/version
+Accept: application/json
+
+###

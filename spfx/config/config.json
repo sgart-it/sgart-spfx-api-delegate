@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "sgart-demo-delegate-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/sgartDemoDelegate/SgartDemoDelegateWebPart.js",
+          "manifest": "./src/webparts/sgartDemoDelegate/SgartDemoDelegateWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "SgartDemoDelegateWebPartStrings": "lib/webparts/sgartDemoDelegate/loc/{locale}.js"
+  }
+}
