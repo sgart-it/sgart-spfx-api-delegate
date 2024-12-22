@@ -1,6 +1,8 @@
 # sgart-spfx-api-delegate
 Demo chiamata a custom API da una web part SPFx con delegate permission
 
+Vedi https://www.sgart.it/IT/informatica/chiamare-una-custom-api-net-8-in-spfx/post
+
 ## APP REGISTRATION
 
 Creare una app registration in Entra Id https://portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/~/RegisteredApps
@@ -44,7 +46,7 @@ package-solution.json
 
 "webApiPermissionRequests": [
     {
-        "resource": "SgartSPFxDelegateDemoApp",
+        "resource": "SgartSPFxDelegateDemoApp2",
         "scope": "user_impersonation"
     }
 ]
@@ -77,22 +79,6 @@ gulp serve
 gulp clear; gulp bundle --ship; gulp package-solution --ship
 
 
-### Note
-
-Esempio di chiamata effettuata da SPFx per ottenere il token
-
-GET
-	https://sgart.sharepoint.com/_api/Microsoft.SharePoint.Internal.ClientSideComponent.Token.AcquireOBOToken?resource='SgartSPFxDelegateDemoApp'&clientId='b997be1f-4b9a-447f-ad36-490f25651f43'
-
-{
-	"odata.error": {
-		"code": "-1, System.AggregateException",
-		"message": {
-			"lang": "en-US",
-			"value": "One or more errors occurred."
-		}
-	}
-}
 
 
 ## Custom API .NET 8

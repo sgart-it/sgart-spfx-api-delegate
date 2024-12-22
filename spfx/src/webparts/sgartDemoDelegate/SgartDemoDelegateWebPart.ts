@@ -34,7 +34,6 @@ export default class SgartDemoDelegateWebPart extends BaseClientSideWebPart<ISga
         .getClient(APPLICATION_ID_URI)
         .then((client: AadHttpClient): void => {
           this.apiClient = client;
-          //console.log('Sgart: token message:', (client as any)._aadTokenProvider._tokenAcquisitionEvent._name);
           console.log('Sgart: client:', this.apiClient);
 
           resolve();
@@ -71,20 +70,20 @@ export default class SgartDemoDelegateWebPart extends BaseClientSideWebPart<ISga
     this.context.statusRenderer.displayLoadingIndicator(this.domElement, 'api');
 
     /*
-    this.apiClient
-    .get(API_BASE_URL + '/demo',  AadHttpClient.configurations.v1)
-    .then((res: HttpClientResponse): Promise<any> => {
-      return res.json();
-    })
-    .then((data: any): void => {
-      console.log("Sgart: data", data);
-      this.context.statusRenderer.clearLoadingIndicator(this.domElement);
-      this.domElement.innerHTML = `
-        <pre>${JSON.stringify(data, null, 4)}</pre>`;
-    }, (err: any): void => {
-      console.error("Sgart: err", err);
-      this.context.statusRenderer.renderError(this.domElement, err);
-    });
+this.apiClient
+  .get(API_BASE_URL + '/demo',  AadHttpClient.configurations.v1)
+  .then((res: HttpClientResponse): Promise<any> => {
+    return res.json();
+  })
+  .then((data: any): void => {
+    console.log("Sgart: data", data);
+    this.context.statusRenderer.clearLoadingIndicator(this.domElement);
+    this.domElement.innerHTML = `
+      <pre>${JSON.stringify(data, null, 4)}</pre>`;
+  }, (err: any): void => {
+    console.error("Sgart: err", err);
+    this.context.statusRenderer.renderError(this.domElement, err);
+  });
     */
 
 
