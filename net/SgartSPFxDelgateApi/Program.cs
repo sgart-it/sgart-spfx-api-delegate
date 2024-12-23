@@ -1,7 +1,9 @@
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.Extensions.Azure;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Identity.Web;
 using NLog;
-using NLog.Extensions.Logging;
 using NLog.Web;
 using SgartSPFxDelgateApi;
 using SgartSPFxDelgateApi.Middlewares;
@@ -28,7 +30,7 @@ try
     // Add services to the container.
     builder.Services
         .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-        .AddMicrosoftIdentityWebApi(builder.Configuration.GetSection("AzureAd"));
+        .AddMicrosoftIdentityWebApi(builder.Configuration, "AzureAd");
 
     builder.Services.AddControllers();
     // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

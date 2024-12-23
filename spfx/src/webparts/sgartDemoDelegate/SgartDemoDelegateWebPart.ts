@@ -18,7 +18,7 @@ export interface ISgartDemoDelegateWebPartProps {
   description: string;
 }
 const API_BASE_URL = "https://localhost:7101";
-const APPLICATION_ID_URI = "api://78ed870c-b931-442e-91ff-db65722fb9d4";
+const APPLICATION_ID_URI = "api://spfx.api/78ed870c-b931-442e-91ff-db65722fb9d4";
 
 export default class SgartDemoDelegateWebPart extends BaseClientSideWebPart<ISgartDemoDelegateWebPartProps> {
 

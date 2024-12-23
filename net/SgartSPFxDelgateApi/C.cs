@@ -5,7 +5,7 @@ namespace SgartSPFxDelgateApi;
 public static class C
 {
     public const string VERSION = "1.2024-12-21";
-    public const string VERSION_BUILD = "20241221"; //YYYYMMDD
+    public const string VERSION_BUILD = "20241223"; //YYYYMMDD
     public const string API_NAME = "SgartSPFxDelgateApi";
 
     public const string LOG_START = "START";
