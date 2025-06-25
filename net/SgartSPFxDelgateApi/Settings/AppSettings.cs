@@ -2,7 +2,7 @@
 
 public class AppSettings
 {
-    public static string KEY_NAME = "AppSettings";
+    public const string KEY_NAME = "AppSettings";
 
     public DemoSettings Demo { get; set; } = new();
 

@@ -5,7 +5,7 @@ namespace SgartSPFxDelgateApi;
 public static class C
 {
     public const string VERSION = "1.2024-12-21";
-    public const string VERSION_BUILD = "20241223"; //YYYYMMDD
+    public const string VERSION_BUILD = "20250615"; //YYYYMMDD
     public const string API_NAME = "SgartSPFxDelgateApi";
 
     public const string LOG_START = "START";
@@ -16,5 +16,5 @@ public static class C
     public const string LOG_END = "END";
     public const string LOG_ERROR = "ERROR";
 
-    public static readonly CultureInfo CI_IT = new CultureInfo(1040);
+    public static readonly CultureInfo CI_IT = new(1040);
 }
