@@ -7,7 +7,7 @@
       "@microsoft/microsoft-graph-client": "3.0.2",
       "@microsoft/teams-js": "2.24.0"
     },
-    "version": "1.20.0",
+    "version": "1.21.1",
     "libraryName": "sgart-spfx-delegate",
     "libraryId": "67c30b64-c004-441b-8342-bfb86737946f",
     "environment": "spo",
